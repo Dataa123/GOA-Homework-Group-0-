@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input{
+            width: 300px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input id="name" type="text" placeholder="Name" />
+        <input id="lastname" type="text" placeholder="Last name" />
+        <input id="age" type="number" placeholder="Age" />
+        <button id="mybtn" type="button">Submit</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: outfit;
+}
+
+body{
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+p{
+    color: white;
+    font-size: 50px;
+}
+
+.buttons{
+    display: flex;
+    gap: 80px;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+    background-color: #3b3b3b;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 50px;
+    animation-name: mybtn;
+    animation-duration: 0.5s;
+    box-shadow: 0 0 35px black;
+}
+
+button:hover{
+    background-color: #1a1a1a;
+    color: white;
+    transform: scale(1.3);
+}

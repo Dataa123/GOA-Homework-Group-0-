@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        #div2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="block">
+        <div id="div2" class="block"></div>
+    </div>
+
+
+    <script>
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementById('div2');
+
+        div1.addEventListener('click', function(){
+            console.log('div1');
+        }, true)
+
+        div2.addEventListener('click', function(){
+            console.log('div2')
+        })
+    </script>
+</body>
+</html>

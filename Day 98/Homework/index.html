@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="maindiv"></div>
+    <div id="main"></div>
+    <img id="img" src="" alt="" width="20%">
+
+    <script src="./script.js"></script>
+
+    <script>
+        const div = document.querySelector("#maindiv");
+        const img = document.querySelector("#img");
+
+        fetch('https://fakestoreapi.com/products/1')
+            .then((result) => result.json())
+            .then((json) => {
+                div.innerHTML = json.id;
+            })
+            .catch((err) => console.log("Error reason", err));
+
+        fetch('https://fakestoreapi.com/products/1')
+            .then((result) => result.json())
+            .then((json) => {
+                img.src = json.image;
+            })
+            .catch((err) => console.log("Error reason", err));
+    </script>
+</body>
+</html>

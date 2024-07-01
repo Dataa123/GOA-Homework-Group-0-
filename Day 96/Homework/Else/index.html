@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h"></h1>
+    <p id="myp"></p>
+
+    <img src="" alt="" id="img">
+
+    <select id="dropdown">
+        <option value=""></option>
+    </select>
+
+
+    <script>
+        // 22.
+        const h1 = document.getElementById("h");
+        fetch("https://fakestoreapi.com/products/2")
+            .then((res) => res.json())
+            .then((res) => {
+                h1.innerHTML = res.title;
+            })
+            .catch((err) => console.log(err));
+
+        // 23.
+        const myP = document.getElementById("myp");
+        fetch("https://fakestoreapi.com/products/2")
+            .then((res) => res.json())
+            .then((res) => {
+                h1.innerHTML = res.title;
+                myP.innerHTML = res.id;
+            })
+            .catch((err) => console.log(err));
+
+        // 24.
+        const dropDown = document.querySelector("#dropdown");
+        for(let i = 0; i < 100; i++){
+            fetch(`https://fakestoreapi.com/products/${i}`)
+                .then((res) => res.json())
+                .then((json) => {
+                    let option = document.createElement('option');
+                    option.value = json.id;
+                    option.textContent = json.title;
+                    dropDown.appendChild(option);
+                })
+                .catch((err) => console.log("Error reason:", err))
+        }
+        // 25.
+        const img = document.querySelector("#img");
+
+        fetch("https://fakestoreapi.com/products/1")
+            .then((res) => res.json())
+            .then((json) => {
+                img.src = json.image;
+                img.style.width = "20%";
+            })
+            .catch((err) => console.log("Error reason:", err))
+    </script>
+</body>
+</html>

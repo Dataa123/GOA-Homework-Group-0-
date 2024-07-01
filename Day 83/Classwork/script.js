@@ -38,21 +38,21 @@
 
 // create manualReduce function (3 parameters - arr, func(sum, nextElement), startingValue)
 
-// function manualReduce(arr, func, startingValue){
-//     let result = startingValue;
-//     for (let i = 0; i < arr.length; i++){
-//         result = func(result, arr[i])
-//     }
-//     return result;
-// }
+function manualReduce(arr, func, startingValue){
+    let result = startingValue;
+    for (let i = 0; i < arr.length; i++){
+        result = func(result, arr[i])
+    }
+    return result;
+}
 
-// // const myArr = [1, 2, 3, 4, 5];
+const myArr = [1, 2, 3, 4, 5];
 
-// // const result = manualReduce(myArr, function(result, nextElement){
-// //     return result + nextElement
-// // }, 5)
+const result = manualReduce(myArr, function(result, nextElement){
+    return result + nextElement
+}, 5)
 
-// // console.log(result)
+console.log(result)
 
 // const strArr = "data".split("")
 
@@ -62,20 +62,20 @@
 
 // console.log(result)
 
-function manualEvery(arr, func){
-    return func(40, "<", arr) 
-}
+// function manualEvery(arr, func){
+//     return func(40, "<", arr) 
+// }
 
-const myFunc = function(number, condition, arr){
-    if (condition == "<"){
-        for (let i = 0; i < arr.length; i++){
-            let isTrue = true;
-            if (arr[i] < number){
-                isTrue = true;
-                break
-            } else{
-                isTrue = false;
-            }
-        }
-    }
-}
+// const myFunc = function(number, condition, arr){
+//     if (condition == "<"){
+//         for (let i = 0; i < arr.length; i++){
+//             let isTrue = true;
+//             if (arr[i] < number){
+//                 isTrue = true;
+//                 break
+//             } else{
+//                 isTrue = false;
+//             }
+//         }
+//     }
+// }

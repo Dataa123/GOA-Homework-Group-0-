@@ -123,3 +123,83 @@ countVowels = (str) => {
 
 console.log(countVowels("Hello world!"));
 console.log(countVowels("Encryption"));
+
+// Template Literals:
+
+// 1.
+
+let var1 = "Data";
+
+console.log(`Hello ${var1}!`);
+
+// 2.
+
+let str1 = "Data";
+let str2 = "Coding";
+
+console.log(`Hello ${str1}! \nHow are you going in ${str2}?`);
+
+// 3.
+
+let num1 = 5;
+let num2 = 10;
+
+console.log(`${num1} + ${num2} = ${num1 + num2}`);
+
+// 4.
+
+let day = 5;
+let month = 7;
+let year = 2024;
+
+console.log(`${day}/${month}/${year}`);
+
+// 5.
+
+let protocol = "https"
+let domain = "Goal-Oriented.ge"
+let path = "homeworks"
+
+console.log(`${protocol}://${domain}/${path}`);
+
+// 6.
+
+let number1 = 7;
+let number2 = 6;
+
+console.log(`${number1} is ${number1 % 2 == 0 ? "Even" : "Odd"}`);
+console.log(`${number2} is ${number2 % 2 == 0 ? "Even" : "Odd"}`);
+
+// 7.
+
+let street = "Moscow Avenue";
+let city = "Tbilisi";
+let zip = 4024;
+
+console.log(`Street: ${street}; City: ${city}; Zip Code: ${zip}`);
+
+// 8.
+
+let paragraphOpen = "<p>";
+let paragraphClose = "</p>";
+
+console.log(`${paragraphOpen}Hello World${paragraphClose}`);
+
+// 9.
+
+const items = ["Item 1", "Item 2", "Item 3"];
+const list = `
+    <ul>
+        ${items.map((item) => `<li>${item}</li>\n`).join("")}
+    </ul>
+`
+
+console.log(list);
+
+// 10.
+
+function call(name){
+    return `Hey ${name}`;
+}
+
+console.log(`She said: ${call("Jumber")}`);

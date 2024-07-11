@@ -203,3 +203,34 @@ function call(name){
 }
 
 console.log(`She said: ${call("Jumber")}`);
+
+// Short Conditionals:
+
+// 1.
+
+let numm = 5;
+
+if(numm < 10 && numm % 2 != 0){
+    console.log("Your odd number is less than 10.");
+}
+
+// 2.
+
+let coins = 99;
+let keys = 1;
+
+if (coins > 99 || keys > 0){
+    console.log("You completed the tour.");
+} else {
+    console.log("To complete the tour, you have to get minimum of 100 coins or get at least one key.");
+}
+
+// 3.
+
+let i = 10;
+let truth = i > 5 ? "Yes" : "No";
+
+console.log(truth);
+
+// 4.
+

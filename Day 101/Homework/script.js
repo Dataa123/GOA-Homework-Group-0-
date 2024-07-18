@@ -234,3 +234,62 @@ console.log(truth);
 
 // 4.
 
+let var3 = "Hello";
+let var4 = null;
+
+var4 && console.log(var3);
+
+// 5.
+
+let a = 0;
+let b = null;
+let c = "hello";
+let d = undefined;
+let e = false;
+
+let firstTruthy = a || b || c || d || e;
+
+console.log(firstTruthy);
+
+// 6.
+
+let num = 5;
+
+num > 0 ? console.log(num) : undefined;
+
+// 7.
+
+// const element = document.getElementById("el");
+// let condition = true;
+
+// condition && element.classList.add("p");
+
+// 8.
+
+const obj = {
+    name: "John",
+    age: 30
+};
+
+const country = obj.country || "Unknown";
+
+console.log(country); 
+
+// 9.
+
+let str = "Ola";
+let res;
+
+str.length > 3 ? res = "Long" : res = "Short";
+
+console.log(res);
+
+// 10.
+
+let condition1 = true;
+let condition2 = true;
+let condition3 = true;
+let condition4 = true;
+
+condition1 && condition2 && condition3 && condition4 && console.log("Hello world!");
+

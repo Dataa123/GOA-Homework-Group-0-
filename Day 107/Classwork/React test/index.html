@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+
+    <button id="clickme">Click me</button>
+
+    <script type="text/babel">
+        function App(){
+            let count = 0;
+            return (
+                <div>
+                    <p>Hello {count}</p>
+                </div>
+            )
+        }
+
+        // function manCreateElement(elem, att, insides){
+        //     const parent = document.createElement(`${elem}`);
+        //     const ins = document.createTextNode(`${insides}`);
+
+        //     parent.appendChild(ins);
+
+        //     parent.id = att[0];
+        //     parent.class = att[1];
+
+        //     document.body.insertBefore(parent, ins);
+        // }
+
+        // document.getElementById('clickme').addEventListener('click', () => {
+        //     manCreateElement('div', ['d1', 'cls'], "Hello world")
+        //     console.log("ola")
+        // })
+
+        // React object - React objects are used to define the structure and behavior of a component, including its user interface and interactions with the user.
+        // ReactDOM object - ReactDOM is a package in React that provides DOM-specific methods (for example render) that can be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page.
+
+        // const element = <h1>Hello, world!</h1>;
+        // This funny tag syntax is neither a string nor HTML.
+        // It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+        ReactDOM.render(App(), document.getElementById('root'))
+    </script>
+</body>
+</html>

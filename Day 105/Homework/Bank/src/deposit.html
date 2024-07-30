@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOA Bank</title>
+    <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="icon" href="../assets/Images/165680-banking-finance-download-free-image.png">
+</head>
+<body>
+    <header>
+        <h1>GOA BANK</h1>
+        <div>
+            <nav>
+                <ul>
+                    <li><a class="hover-underline-animation" href="./home.html">Home</a></li>
+                    <li><a class="hover-underline-animation" href="./deposit.html">Deposit</a></li>
+                    <li><a class="hover-underline-animation" href="./withdraw.html">Withdraw</a></li>
+                    <li><a class="hover-underline-animation" href="./transaction.html">Transaction</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Deposit</h1>
+        <div class="container">
+            <form id="form">
+                <div>
+                    <div>
+                        <label for="name">Amount of Money:</label>
+                        <input type="text" id="name" name="money">
+                    </div>
+                    <div>
+                        <label for="code">Card Code:</label>
+                        <input type="number" id="code" name="code">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                </div>
+                <input type="button" value="Deposit" id="submit">
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="./deposit.js"></script>
+</body>
+</html>

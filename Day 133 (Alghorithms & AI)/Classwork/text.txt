@@ -1,0 +1,53 @@
+macros - macros is simmilar to variable but we create it with #define. Whenever a macro name is encountered by the compiler, it replaces the name with the definition of the macro.
+macros - მაკროსი ცვლადის მსგავსია მაგრამ ჩვენ მას ვქმნით #define'ით. როდესაც ფაილში ამ მაკროს სახელი შეხვდება კომპილერს, მას ჩაანაცვლებს მასზე მინიჭებული მნიშვნელობით.
+
+
+/////////////////
+GETC
+
+fgetc - if end-of-file indicator is not set and next character is present, it obtains that character as an UNSIGNED CHAR (converted to an int) and advances the associated file position indicator for the stream.
+fgetc- თუ ფაილის დამთავრების მაჩვენებელი გამორთულია და შემდეგი სიმბოლოც გვაქვს, ეს ფუნქცია ინარჩუნებს ამ სიმბოლოს როგორც UNSIGNED CHAR, აკეთებს int'ად და ანიჭებს დაკავშირებულ ფაილის პოზიციის მაჩვენებელს stream(ქვემოთ არის განმარტებული)'ისთვის.
+
+getc - equivalent to fgetc, except that if it is implemented as a macro, it may evaluate stream more than once, so the argument should never be an expression with side effects
+getc - fgetc'ის ექვივალენტურია, მაგრამ ის არის ჩაშენებული როგორც მაკრო, მან შეიძლება გადახედოს stream'ს ერთზე მეტჯერ, ასე არგუმენტი არასდროს იქნება გამოსახულება გვერდითი ეფექტებით
+
+getchar - equivalent to getc with the argument stdin
+getchar - getc'ის ექვივალენტური მაგრამ stdin(განმარტებულია ქვემოთ) არგუმენტით.
+
+stdin - standard input stream
+stdin - სტანდარტული ინფუთის დინება, ანუ აქ უკვე აღარ კითხულობს ფაილიდან, არამედ უკვე სტანდარტულად
+
+UNSIGNED CHAR - unsigned char is a character datatype where the variable consumes all the 8 bits of the memory and there is no sign bit (view photo)
+UNSIGNED CHAR - unsigned char არის სიმბოლური მონაცემთა ტიპი სადაც ცვლადი ითვისებს რვავე ბიტს მეხსიერებიდან და არ ტოვებს ნიშნის ბიტს. (იხილეთ ფოტო)
+
+int fgetc(FILE *stream);
+
+stream - A pointer to a FILE object that identifies the input stream.
+stream - pointer'ი(განმარტებულია ქვემოთ) FILE object'ისთვის(განმარტებულია ქვემოთ) რომელიც წარმოადგენს input'ის დინებას. ანუ მიგვითითებს ადგილზე სადაც ჩაიწერება მონაცემები, მაგალითად ეს შეიძლება იყოს რაიმე ფაილი ან ეკრანი.
+
+FILE object - the object type capable of recording all the information needed to control a stream, including its file position indicator, a pointer to its associated buffer (if any), an error indicator that records whether a read/write error has occurred, and an end-of-file indicator that records whether the end of the file has been reached
+FILE object - ობიექტის ტიპი რომელსაც შეუძლია შეინახოს ყველა საჭირო ინფორმაცია stream'ის კონტროლისთვის, ამათი ჩათვლით: ფაილის პოზიციის მაჩვენებელი, დაკავშირებული buffer'ის(განმარტებულია ქვემოთ) pointer'ი(განმარტებულია ქვემოთ), error'ის მაჩვენებელი რომელიც გვეუბნება წაკითხვის/დაწერის შეცდომა დაფიქსირდა თუ არა და ფაილის დასრულების მაჩვენებელი რომელიც აკონტროლებს მიაღწია თუ არა ფაილმა მის დასასრულს.
+
+buffer - a sequential section of memory that is used to temporarily store some data that is being transferred from one place to another
+buffer - თანმიმდევრული მეხსიერების სექცია რომელიც გამოიყენება რომ დროებით შეინახოს რაღაც მონაცემები რომლებიც გადადიან ერთი ადგილიდან მეორეზე
+
+pointer - a variable that stores the memory address of another variable as its value
+pointer - ცვლადი რომელიც ინახავს სხვა ცვლადის მეხსიერების მისამართს და მის მნიშნვნელობას
+/////////////////
+
+/////////////////
+PUTC
+
+fputc - function that writes the character specified by c (converted to an unsigned char) to the output stream pointed to by stream, at the position indicated by the associated file position indicator for the stream (if defined), and advances the indicator appropriately
+fputc - ფუნქცია რომელიც წერს სიმბოლოს რომელიც გამორჩეულია იმით რომ არის unsigned char(განმარტება იხილეთ ზემოთ). stream'ი ეხმარება fputc'ს რომ იცოდეს სად უნდა გაგზავნოს ეს სიმბოლო (მაგალითად თუ stream'ი არის stdout, fputc დაწერს ეკრანზე მაგრამ თუ არის რაიმე ფაილი მაშინ დაწერს იმ ფაილში). 
+
+The fputc function returns the character written. If a write error occurs, the error indicator for the stream is set and fputc returns EOF.
+fputc ფუნქცია აბრუნებს დაწერილ სიმბოლოს. თუ დაწერის ერორი შეხვდება, ერორის ინდიკატორი stream'ისთვის ირთვება და fputc აბრუნებს EOF(end-of-file)'ს.
+
+putc - The putc function is equivalent to fputc, except that if it is implemented as a macro, it may evaluate stream more than once, so that argument should never be an expression with side effects.
+putc - putc ექვივალენტურია fputc'ის გარდა იმისა რომ ეს არის ჩაშენებული როგორც მაკრო, მან შეიძლება გადახედოს stream'ს ერთზე მეტჯერ, ასე არგუმენტი არასდროს იქნება გამოსახულება გვერდითი ეფექტებით
+
+putchar - equivalent to putc with the second argument stdout
+putchar - putc'ის ექვივალენტური მეორე არგუმენტით: stdout (standard output)
+
+/////////////////
